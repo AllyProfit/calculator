@@ -48,15 +48,13 @@ li:last-child{
     font-weight: 300;
 }
 
-.calculator__console__number{
-    
+.calculator__console__number{   
     font-size: 42px;
     text-align: right;
     width: 100%;
 }
 .calculator__buttons{
     padding: 3px;
-    
 }
 .calculator__buttons button{
     width: 84px;
@@ -70,7 +68,6 @@ li:last-child{
 }
 .calculator__buttons button:last-child{
    margin-right: 0;
-
 }
 .calculator__buttons button:hover{
     background: #92fbff !important;
