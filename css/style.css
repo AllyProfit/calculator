@@ -1,7 +1,7 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif
 }
- 
+
 button:focus, input:focus{outline:0}
 button,input {
     background: none;
@@ -48,8 +48,7 @@ li:last-child{
     font-weight: 300;
 }
 
-.calculator__console__number{
-    
+.calculator__console__number{   
     font-size: 42px;
     text-align: right;
     width: 100%;
@@ -63,9 +62,8 @@ li:last-child{
     height: 54px;
     background: #F3F3F3;
     font-size: 28px;
-    font-weight: lighter;
     margin-right: 3px;
-    transition: all .3s;
+    transition: all .5s;
     cursor: pointer;
 }
 .calculator__buttons button:last-child{
@@ -74,9 +72,8 @@ li:last-child{
 }
 .calculator__buttons button:hover{
     background: #92fbff !important;
-    transition: all .3s;
+    transition: all .5s;
 }
 .calculator__buttons__number{
     background-color: #FFF !important;
-    font-weight: 400 !important;
 }
