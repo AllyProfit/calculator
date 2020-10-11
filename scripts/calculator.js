@@ -3,23 +3,15 @@ const deleteString = document.getElementById('deleteString');
 const deleteAll = document.getElementById('deleteAll');
 const deleteOne = document.getElementById('deleteOne');
 const divide = document.getElementById('divide');
-const seven = document.getElementById('seven');
-const eight = document.getElementById('eight');
-const nine = document.getElementById('nine');
 const multiply = document.getElementById('multiply');
-const four = document.getElementById('four');
-const five = document.getElementById('five');
-const six = document.getElementById('six');
 const minus = document.getElementById('minus');
-const one = document.getElementById('one');
-const two = document.getElementById('two');
-const three = document.getElementById('three');
 const plus = document.getElementById('plus');
 const plusMinus = document.getElementById('plusMinus');
 const dot = document.getElementById('dot');
 const equal = document.getElementById('equal');
-const zero = document.getElementById('zero');
 const output = document.getElementById('resultNumber');
+const numbers = document.getElementsByClassName('calculator__buttons__number')
+console.log(numbers)
 const handlePlusMinus = () => {
     if (result.value != '0')  {
         result.value = -result.value
@@ -76,13 +68,6 @@ const calc = () =>{
     }
     output.innerHTML = '';
 }
-const array = [
-    zero, one, two, three, four, five, six, seven, eight, nine
-]
-for (let i = 0; i< array.length; i++)
-{
-    array[i].addEventListener('click',()=> number(i))
-};
 const arrayTwo = [plus, minus, multiply,divide]
 for (let j = 0; j< arrayTwo.length; j++)
 {
@@ -97,3 +82,17 @@ for (let i = 0; i< arrayThree.length;i++)
 equal.addEventListener('click',() => calc() )
 dot.addEventListener('click',()=> handleDot())
 plusMinus.addEventListener('click',()=> handlePlusMinus())
+for (let i = 0; i< numbers.length; i++){
+    numbers[i].addEventListener('click',()=> number(numbers[i].innerHTML))
+}
+document.addEventListener('keyup',(event) => {
+    for (let i = 0; i < numbers.length;i++){
+        const btn = numbers[i].innerHTML;
+     
+        if (event.key== btn){
+            number(btn)
+        }
+    }
+console.log(event.key)
+})
+
