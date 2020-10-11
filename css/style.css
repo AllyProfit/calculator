@@ -82,7 +82,9 @@ li:last-child{
     background-color:#FFF !important;
 }
 
-
+.calculator--light .button:active{
+    background: rgb(5, 129, 187) !important;
+}
 .calculator--dark .calculator__console__number {
         color: #E4E4E4 !important;
     }
@@ -100,4 +102,7 @@ li:last-child{
 }
 .calculator--dark .calculator__buttons__number{
     background-color: #474747 !important;
+}
+.calculator--dark .button:active{
+    background: rgb(102, 8, 31) !important;
 }
